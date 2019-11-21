@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--En esta parte estamos poniendo lo que es la ruta de las imagenes para el logo-->
+	<title>Publicar producto</title>
+	<meta charset = "utf-8">
+	<link rel = "shorcut icon" href = "../img/imageLogo.png">
+	<link rel = "stylesheet" href = "headerSuperior.css">
+</head>
+
+<body>
+	<header>
+		<div class = "logo">
+			<img src = "../img/logoEmpresa.png" width ="351" height = "70" class = "imageLogo">
+		</div>
+	</header>
+
+	<!--Aqui pondremos lo que es el login-->
+		<form action = "registrar.php" method = "POST" class = "form-registrar">
+			<h1 class = "form_titulo">Publicar producto</h1>
+			<div class = "contenedor--inputs">
+				<h2>Nombre del Producto</h2> 
+				<input type = "text" name = "nombre" class = "input-text" required>    <img id="output" src="../img/foto.png" width="200" align="right"/>
+				<h2>Precio del Producto</h2>
+				<input type = "text" name = "precio" class = "input-text" required>
+				<h2>Cantidad Disponible</h2> 
+				<input type = "text" name = "cant" class = "input-text" required>
+				<h2>Caracteristicas</h2>
+				<input type = "text" name = "caract" class = "input-text" required>
+				<h2>Descripcion</h2>
+				<input type = "text" name = "desc" class = "input-text" required>
+				
+				<p><input type="file" name="image" class = "input-text2" accept="image/gif, image/jpeg, image/png" id="file"  onchange="loadFile(event)"></p>
+				<script>
+				var loadFile = function(event) {
+					var image = document.getElementById('output');
+					image.src = URL.createObjectURL(event.target.files[0]);
+				};
+				</script>
+				<input type = "submit" value = "Publicar Producto" class = "boton-publicar"> 
+				
+			</div>
+			
+		</form>
+
+</body>
+</html>
