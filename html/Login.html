@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--En esta parte estamos poniendo lo que es la ruta de las imagenes para el logo-->
+	<title>Iniciar sesión</title>
+	<meta charset = "utf-8">
+	<link rel = "shorcut icon" href = "../img/imageLogo.png">
+	<link rel = "stylesheet" href = "headerSuperior.css">
+</head>
+
+<body>
+	<header class="logoESCOMerca">
+		<div>
+			<a href="../html/index.html"> <img src = "../img/logoEmpresa.png" width ="351" height = "70"></a>
+		</div>
+	</header>
+
+	<!--Aqui pondremos lo que es el login-->
+		<form action = "registrar.php" method = "POST" class = "form-registrar">
+			<h1 class = "form_titulo">Iniciar sesión</h1>
+			<div class = "contenedor--inputs">
+				<input type = "text" name = "nombre" placeholder = "Curp o boleta" class = "input-username" required> 
+				<input type = "password" name = "password" placeholder = "Contraseña" class = "input-password" required>
+				<input type = "submit" value = "Enviar" class = "boton-enviar"> 
+			 	<input type = "submit" value = "Registrarse" class = "boton-registrarse">
+				<a class = "Olvidaste_contra" href="#">¿Olvidaste tu Constraseña?</a>
+			</div>
+			
+		</form>
+
+</body>
+</html>
